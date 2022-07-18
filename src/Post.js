@@ -25,7 +25,7 @@ export default function Post(props) {
               </div>
 
               <div className="conteudo">
-                <img src={props.src2} />
+                <img onClick={curtirpost} name={liked} src={props.src2} />
               </div>
 
               <div className="fundo">
