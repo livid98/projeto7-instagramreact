@@ -1,4 +1,17 @@
+import React from "react";
 export default function Post(props) {
+
+    const [liked, setliked] = React.useState("heart-outline");
+    function curtirpost(){
+     if(liked === "heart-outline"){
+      setliked("heart");
+
+     }else{
+        setliked("heart-outline");
+     }
+
+
+    }
     return (
         <div className="post">
               <div className="topo">
@@ -18,7 +31,7 @@ export default function Post(props) {
               <div className="fundo">
                 <div className="acoes">
                   <div>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon onClick={curtirpost} name={liked}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                   </div>
